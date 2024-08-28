@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "maika_user",
+    "password": "RNMcuc3WYkPvUrstJvm5jNX2yjZKbdwM",
+    "database": "maika",
+    "host": "dpg-cr7dttq3esus7387o18g-a.singapore-postgres.render.com",
+    "dialect": "postgres",
+    "logging": false,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "production": {
+    "username": "maika_user",
+    "password": "RNMcuc3WYkPvUrstJvm5jNX2yjZKbdwM",
+    "database": "maika",
+    "host": "dpg-cr7dttq3esus7387o18g-a.singapore-postgres.render.com",
+    "dialect": "postgres",
+    "logging": false,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
