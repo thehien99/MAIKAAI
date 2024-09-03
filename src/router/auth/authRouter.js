@@ -23,12 +23,12 @@ const authRouter = (app) => {
       next()
     })(req, res, next)
   }, (req, res) => {
-    res.redirect(`${process.env.URL_CLIENT}/login-success/${req.user?.id}`)
+    res.redirect(`${process.env.URL_CLIENT}/login`)
   })
 
 
   //LOGIN
-  router.post('/login-success', (req, res) => {
+  router.post('/login', (req, res) => {
     authController.loginController(req.body, res)
   })
 

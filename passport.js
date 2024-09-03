@@ -10,7 +10,6 @@ const loginUseGoogle = () => {
     clientID: process.env.CLIENTID,
     clientSecret: process.env.CLIENTSECRET,
     callbackURL: process.env.GG_CALLBACKURL,
-    passReqToCallback: true
   },
 
     async function (profile, done) {
