@@ -9,7 +9,7 @@ const loginUseGoogle = () => {
   passport.use(new GoogleStrategy({
     clientID: process.env.CLIENTID,
     clientSecret: process.env.CLIENTSECRET,
-    callbackURL: '/auth/callback',
+    callbackURL: 'https://maikaai.onrender.com/auth/callback',
   },
 
     async function (profile, done) {

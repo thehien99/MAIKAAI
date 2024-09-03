@@ -17,7 +17,7 @@ const authRouter = (app) => {
     }
     ));
 
-  router.get(`/auth/callback`, (req, res, next) => {
+  router.get(`https://maikaai.onrender.com/auth/callback`, (req, res, next) => {
     passport.authenticate('google', (err, profile) => {
       req.user = profile
       next()
