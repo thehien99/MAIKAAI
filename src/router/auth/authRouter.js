@@ -17,7 +17,7 @@ const authRouter = (app) => {
     }
     ));
 
-  router.get(`https://maikaai.onrender.com/auth/callback`, (req, res, next) => {
+  router.get(`https://maika-fe.vercel.app`, (req, res, next) => {
     passport.authenticate('google', (err, profile) => {
       req.user = profile
       next()
