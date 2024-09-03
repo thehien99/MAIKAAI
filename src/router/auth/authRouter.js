@@ -17,18 +17,18 @@ const authRouter = (app) => {
     }
     ));
 
-  router.get(`${process.env.GG_CALLBACKURL}`, (req, res, next) => {
+  router.get(`/auth/callback`, (req, res, next) => {
     passport.authenticate('google', (err, profile) => {
       req.user = profile
       next()
     })(req, res, next)
   }, (req, res) => {
-    res.redirect(`${process.env.URL_CLIENT}/login`)
+    res.redirect(`${process.env.URL_CLIENT}`)
   })
 
 
   //LOGIN
-  router.post('/login', (req, res) => {
+  router.post('/', (req, res) => {
     authController.loginController(req.body, res)
   })
 
