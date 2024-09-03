@@ -9,7 +9,7 @@ const loginUseGoogle = () => {
   passport.use(new GoogleStrategy({
     clientID: process.env.CLIENTID,
     clientSecret: process.env.CLIENTSECRET,
-    callbackURL: process.env.CALLBACKURL,
+    callbackURL: process.env.GG_CALLBACKURL,
     passReqToCallback: true
   },
 

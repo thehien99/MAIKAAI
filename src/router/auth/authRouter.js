@@ -14,7 +14,7 @@ const authRouter = (app) => {
     }
     ));
 
-  router.get(`${process.env.CALLBACKURL}`, (req, res, next) => {
+  router.get(`${process.env.GG_CALLBACKURL}`, (req, res, next) => {
     passport.authenticate('google', (err, profile) => {
       req.user = profile
       next()
