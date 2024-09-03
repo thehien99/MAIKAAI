@@ -12,7 +12,8 @@ const authRouter = (app) => {
   router.get('/auth/google',
     passport.authenticate('google', {
       scope:
-        ['email', 'profile']
+        ['email', 'profile'],
+      session: false
     }
     ));
 
