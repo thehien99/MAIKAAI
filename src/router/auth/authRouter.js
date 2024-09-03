@@ -2,6 +2,8 @@ const express = require('express');
 const passport = require('passport');
 const authController = require('../../controllers/authController')
 
+require('dotenv').config()
+
 let router = express.Router();
 
 const authRouter = (app) => {
