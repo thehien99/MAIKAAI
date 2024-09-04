@@ -16,7 +16,7 @@ const authRouter = (app) => {
     }
     ));
 
-  router.get('/google/callback', (req, res, next) => {
+  router.get('/auth/google/callback', (req, res, next) => {
     passport.authenticate('google', (err, profile) => {
       req.user = profile
       next()

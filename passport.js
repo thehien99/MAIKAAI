@@ -9,7 +9,7 @@ const loginUseGoogle = () => {
   passport.use(new GoogleStrategy({
     clientID: process.env.CLIENTID,
     clientSecret: process.env.CLIENTSECRET,
-    callbackURL: '/google/callback',
+    callbackURL: '/auth/google/callback',
   },
 
     async function (profile, cb) {
