@@ -13,22 +13,21 @@ const authRouter = (app) => {
     passport.authenticate('google', {
       scope:
         ['email', 'profile'],
-      session: false
     }
     ));
 
-  router.get(`https://maika-fe.vercel.app`, (req, res, next) => {
+  router.get('/google/callback', (req, res, next) => {
     passport.authenticate('google', (err, profile) => {
       req.user = profile
       next()
     })(req, res, next)
   }, (req, res) => {
-    res.redirect(`${process.env.URL_CLIENT}`)
+    res.redirect(`${process.env.URL_CLIENT}/login`)
   })
 
 
   //LOGIN
-  router.post('/', (req, res) => {
+  router.post('/login', (req, res) => {
     authController.loginController(req.body, res)
   })
 
